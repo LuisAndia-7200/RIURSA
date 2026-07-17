@@ -70,3 +70,42 @@ sections.forEach((section) => sectionObserver.observe(section));
 window.addEventListener("resize", () => {
   if (window.innerWidth > 900) closeNavigation();
 });
+
+/* ---------- Carrusel de artículos ---------- */
+const articlesTrack = document.getElementById("articlesTrack");
+const carouselPrevBtn = document.querySelector(".carousel-btn--prev");
+const carouselNextBtn = document.querySelector(".carousel-btn--next");
+
+if (articlesTrack && carouselPrevBtn && carouselNextBtn) {
+  const scrollGap = 4; // margen de tolerancia en px para comparar posiciones de scroll
+
+  const updateCarouselButtons = () => {
+    const maxScroll = articlesTrack.scrollWidth - articlesTrack.clientWidth;
+    carouselPrevBtn.disabled = articlesTrack.scrollLeft <= scrollGap;
+    carouselNextBtn.disabled = articlesTrack.scrollLeft >= maxScroll - scrollGap;
+  };
+
+  // Se desplaza exactamente el ancho visible del track: como cada tarjeta
+  // mide un tercio de ese ancho (o la mitad/completo según el breakpoint),
+  // cada clic avanza un grupo completo de tarjetas.
+  const scrollByPage = (direction) => {
+    articlesTrack.scrollBy({
+      left: direction * articlesTrack.clientWidth,
+      behavior: "smooth",
+    });
+  };
+
+  carouselPrevBtn.addEventListener("click", () => scrollByPage(-1));
+  carouselNextBtn.addEventListener("click", () => scrollByPage(1));
+
+  articlesTrack.addEventListener("scroll", updateCarouselButtons, { passive: true });
+  window.addEventListener("resize", updateCarouselButtons);
+
+  // Soporte de teclado cuando el track tiene foco
+  articlesTrack.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") scrollByPage(1);
+    if (event.key === "ArrowLeft") scrollByPage(-1);
+  });
+
+  updateCarouselButtons();
+}
