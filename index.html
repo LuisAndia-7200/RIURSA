@@ -44,7 +44,7 @@
           <a class="nav-link" href="#nosotros">Nosotros</a>
           <a class="nav-link" href="#universidades">Universidades</a>
           <a class="nav-link" href="#actividades">Actividades</a>
-          <a class="nav-link" href="#recursos">Publicaciones</a>
+          <a class="nav-link" href="#publicaciones" data-page="publicaciones">Publicaciones</a>
           <a class="nav-link" href="#normas">Normas legales</a>
           <a class="nav-link" href="#contacto">Contacto</a>
           <a class="button button--small button--primary nav-cta" href="#unete">
@@ -334,26 +334,35 @@
         </div>
       </section>
 
-      <section class="resources section" id="recursos" aria-labelledby="resources-title">
-        <div class="container">
-          <div class="section-heading section-heading--split reveal">
-            <div>
-              <p class="eyebrow"><span></span>Centro de conocimiento</p>
-              <h2 id="resources-title">Recursos para fortalecer la gestión universitaria.</h2>
-            </div>
-            <p>
+      <!-- Página oculta de Publicaciones -->
+      <section class="publications-page" id="publicaciones" aria-labelledby="pub-title">
+        <div class="pub-header">
+          <button class="pub-close" aria-label="Cerrar página de publicaciones">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="container pub-header__content">
+            <p class="eyebrow eyebrow--light" style="margin-bottom: 1.5rem;">
+              <span></span>
+              Centro de conocimiento
+            </p>
+            <h1 id="pub-title">Recursos para fortalecer la gestión universitaria</h1>
+            <p class="pub-subtitle">
               Documentos seleccionados para orientar decisiones, implementar proyectos y comprender
               el marco de la responsabilidad social universitaria.
             </p>
           </div>
+        </div>
 
-          <div class="resources-layout">
-            <div class="publications reveal">
-              <div class="resource-title-row">
-                <h3>Publicaciones y libros</h3>
-                <a class="text-link" href="#contacto">Explorar biblioteca <span aria-hidden="true">↗</span></a>
-              </div>
-
+        <div class="container pub-content">
+          <!-- Sección de Libros -->
+          <section class="pub-section" aria-labelledby="books-title">
+            <div class="resource-title-row">
+              <h2 id="books-title" class="pub-section__title">Libros</h2>
+            </div>
+            
+            <div class="books-grid">
               <article class="book-card">
                 <div class="book-cover book-cover--blue" aria-hidden="true">
                   <span>RIURSA</span>
@@ -361,7 +370,7 @@
                 </div>
                 <div class="book-card__content">
                   <p>Libro colectivo</p>
-                  <h4>Guia para la Institucionalización de la RSU</h4>
+                  <h4>Guía para la Institucionalización de la RSU</h4>
                   <span class="file-meta">PDF · Documento digital</span>
                   <a href="#contacto" class="download-link">
                     Descargar PDF
@@ -386,43 +395,147 @@
                   </a>
                 </div>
               </article>
-            </div>
 
-            <div class="legal-panel reveal reveal--delay" id="normas">
-              <div class="legal-panel__header">
-                <span class="legal-panel__icon">
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 21h16M6 18h12M8 18V9m4 9V9m4 9V9M5 9h14L12 3 5 9Z" /></svg>
-                </span>
-                <div>
-                  <p>Consulta rápida</p>
-                  <h3>Marco normativo</h3>
+              <article class="book-card">
+                <div class="book-cover book-cover--orange" aria-hidden="true">
+                  <span>RSU</span>
+                  <strong>Experiencias<br />de impacto<br />territorial</strong>
                 </div>
+                <div class="book-card__content">
+                  <p>Reporte institucional</p>
+                  <h4>Sistematización de buenas prácticas en responsabilidad social</h4>
+                  <span class="file-meta">PDF · Documento digital</span>
+                  <a href="#contacto" class="download-link">
+                    Descargar PDF
+                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14" /></svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Sección de Artículos -->
+          <section class="pub-section" aria-labelledby="articles-title">
+            <div class="resource-title-row">
+              <h2 id="articles-title" class="pub-section__title">Artículos</h2>
+            </div>
+            
+            <div class="articles-grid">
+              <article class="article-card">
+                <div class="article-card__meta">
+                  <span class="article-category">Educación superior</span>
+                  <span class="article-date">2026</span>
+                </div>
+                <h3>La responsabilidad social como eje transformador de la educación universitaria</h3>
+                <p>
+                  Análisis sobre la integración de la responsabilidad social en los currículos
+                  académicos y su impacto en la formación de profesionales comprometidos con el
+                  desarrollo sostenible.
+                </p>
+                <a href="#contacto" class="article-link">
+                  Ver artículo
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </article>
+
+              <article class="article-card">
+                <div class="article-card__meta">
+                  <span class="article-category">Impacto social</span>
+                  <span class="article-date">2026</span>
+                </div>
+                <h3>Medición del impacto social en proyectos universitarios</h3>
+                <p>
+                  Metodologías y herramientas prácticas para evaluar el alcance real de las
+                  iniciativas de responsabilidad social desarrolladas por universidades en sus
+                  comunidades.
+                </p>
+                <a href="#contacto" class="article-link">
+                  Ver artículo
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </article>
+
+              <article class="article-card">
+                <div class="article-card__meta">
+                  <span class="article-category">Cooperación académica</span>
+                  <span class="article-date">2025</span>
+                </div>
+                <h3>Redes interuniversitarias: modelos de colaboración para el cambio</h3>
+                <p>
+                  Estudio comparativo de redes académicas exitosas y su contribución a la
+                  innovación, la sostenibilidad y el fortalecimiento de capacidades institucionales.
+                </p>
+                <a href="#contacto" class="article-link">
+                  Ver artículo
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </article>
+
+              <article class="article-card">
+                <div class="article-card__meta">
+                  <span class="article-category">Sostenibilidad</span>
+                  <span class="article-date">2025</span>
+                </div>
+                <h3>La universidad como motor de desarrollo sostenible territorial</h3>
+                <p>
+                  Reflexión sobre el rol estratégico de las instituciones de educación superior
+                  en la construcción de territorios sostenibles y resilientes frente a desafíos
+                  ambientales.
+                </p>
+                <a href="#contacto" class="article-link">
+                  Ver artículo
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="m9 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="resources section" id="normas" aria-labelledby="legal-title">
+        <div class="container">
+          <div class="legal-panel reveal">
+            <div class="legal-panel__header">
+              <span class="legal-panel__icon">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 21h16M6 18h12M8 18V9m4 9V9m4 9V9M5 9h14L12 3 5 9Z" /></svg>
+              </span>
+              <div>
+                <p>Consulta rápida</p>
+                <h2 id="legal-title">Marco normativo</h2>
               </div>
-              <p class="legal-panel__intro">
-                Normas y lineamientos esenciales para la gestión responsable en la educación superior.
-              </p>
-              <div class="legal-list">
-                <a href="https://www.gob.pe/institucion/minedu/normas-legales/118482-30220" target="_blank" rel="noopener noreferrer">
-                  <span><small>Ley universitaria</small><strong>Ley N.° 30220</strong></span>
-                  <i aria-hidden="true">↗</i>
-                </a>
-                <a href="https://www.sunedu.gob.pe/" target="_blank" rel="noopener noreferrer">
-                  <span><small>Superintendencia</small><strong>Lineamientos SUNEDU</strong></span>
-                  <i aria-hidden="true">↗</i>
-                </a>
-                <a href="https://www.gob.pe/minam" target="_blank" rel="noopener noreferrer">
-                  <span><small>Gestión ambiental</small><strong>Normativa del MINAM</strong></span>
-                  <i aria-hidden="true">↗</i>
-                </a>
-                <a href="#contacto">
-                  <span><small>Repositorio RIURSA</small><strong>Otros documentos legales</strong></span>
-                  <i aria-hidden="true">→</i>
-                </a>
-              </div>
-              <div class="legal-panel__note">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 8v5m0 3v.01M12 3 2 21h20L12 3Z" /></svg>
-                Verifica siempre la vigencia de cada norma en su fuente oficial.
-              </div>
+            </div>
+            <p class="legal-panel__intro">
+              Normas y lineamientos esenciales para la gestión responsable en la educación superior.
+            </p>
+            <div class="legal-list">
+              <a href="https://www.gob.pe/institucion/minedu/normas-legales/118482-30220" target="_blank" rel="noopener noreferrer">
+                <span><small>Ley universitaria</small><strong>Ley N.° 30220</strong></span>
+                <i aria-hidden="true">↗</i>
+              </a>
+              <a href="https://www.sunedu.gob.pe/" target="_blank" rel="noopener noreferrer">
+                <span><small>Superintendencia</small><strong>Lineamientos SUNEDU</strong></span>
+                <i aria-hidden="true">↗</i>
+              </a>
+              <a href="https://www.gob.pe/minam" target="_blank" rel="noopener noreferrer">
+                <span><small>Gestión ambiental</small><strong>Normativa del MINAM</strong></span>
+                <i aria-hidden="true">↗</i>
+              </a>
+              <a href="#contacto">
+                <span><small>Repositorio RIURSA</small><strong>Otros documentos legales</strong></span>
+                <i aria-hidden="true">→</i>
+              </a>
+            </div>
+            <div class="legal-panel__note">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 8v5m0 3v.01M12 3 2 21h20L12 3Z" /></svg>
+              Verifica siempre la vigencia de cada norma en su fuente oficial.
             </div>
           </div>
         </div>
@@ -474,7 +587,7 @@
           <a href="#nosotros">Nosotros</a>
           <a href="#universidades">Universidades</a>
           <a href="#actividades">Actividades</a>
-          <a href="#recursos">Publicaciones</a>
+          <a href="#publicaciones" data-page="publicaciones">Publicaciones</a>
         </div>
 
         <div class="footer-column">
