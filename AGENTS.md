@@ -9,7 +9,6 @@ This is a dependency-free static institutional website. `index.html` contains al
 - `index.html`: Main landing page and content hierarchy.
 - `styles.css`: Design tokens, layout, components, motion, and responsive breakpoints.
 - `script.js`: Mobile menu, sticky-header state, section navigation state, and reveal animations.
-- `assets/images/`: Locally hosted institutional imagery.
 
 ## Conventions
 
