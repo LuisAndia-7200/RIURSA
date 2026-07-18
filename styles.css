@@ -408,12 +408,12 @@ select {
   inset: 0 0 auto;
   z-index: 100;
   height: var(--header-height);
-  background: rgba(255, 255, 255, 1);
+  background: rgba(247, 247, 247, 1);
   border-bottom: 1px solid rgba(11, 59, 90, 0.08);
 }
 
 .site-header.is-scrolled {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(247, 247, 247, 1);
   box-shadow: 0 10px 35px rgba(7, 44, 67, 0.08);
 }
 
