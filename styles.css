@@ -410,8 +410,6 @@ select {
   height: var(--header-height);
   background: rgba(255, 255, 255, 1);
   border-bottom: 1px solid rgba(11, 59, 90, 0.08);
-  backdrop-filter: blur(18px) saturate(140%);
-  transition: box-shadow var(--transition), background var(--transition);
 }
 
 .site-header.is-scrolled {
