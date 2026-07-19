@@ -71,41 +71,50 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 900) closeNavigation();
 });
 
-/* ---------- Carrusel de artículos ---------- */
-const articlesTrack = document.getElementById("articlesTrack");
-const carouselPrevBtn = document.querySelector(".carousel-btn--prev");
-const carouselNextBtn = document.querySelector(".carousel-btn--next");
+/* ---------- Carruseles de Publicaciones (Libros y Artículos) ----------
+   Antes este script solo controlaba UN carrusel, buscando el primer botón
+   ".carousel-btn--prev/--next" de toda la página. Ahora hay dos carruseles
+   (Libros y Artículos), así que cada uno se conecta por separado buscando
+   sus propios botones DENTRO de su .pub-section (así el botón de "Libros"
+   nunca mueve el track de "Artículos" y viceversa). */
+const carouselSections = document.querySelectorAll(".pub-section");
 
-if (articlesTrack && carouselPrevBtn && carouselNextBtn) {
+carouselSections.forEach((section) => {
+  const track = section.querySelector(".articles-carousel__track");
+  const prevBtn = section.querySelector(".carousel-btn--prev");
+  const nextBtn = section.querySelector(".carousel-btn--next");
+
+  if (!track || !prevBtn || !nextBtn) return;
+
   const scrollGap = 4; // margen de tolerancia en px para comparar posiciones de scroll
 
   const updateCarouselButtons = () => {
-    const maxScroll = articlesTrack.scrollWidth - articlesTrack.clientWidth;
-    carouselPrevBtn.disabled = articlesTrack.scrollLeft <= scrollGap;
-    carouselNextBtn.disabled = articlesTrack.scrollLeft >= maxScroll - scrollGap;
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    prevBtn.disabled = track.scrollLeft <= scrollGap;
+    nextBtn.disabled = track.scrollLeft >= maxScroll - scrollGap;
   };
 
   // Se desplaza exactamente el ancho visible del track: como cada tarjeta
   // mide un tercio de ese ancho (o la mitad/completo según el breakpoint),
   // cada clic avanza un grupo completo de tarjetas.
   const scrollByPage = (direction) => {
-    articlesTrack.scrollBy({
-      left: direction * articlesTrack.clientWidth,
+    track.scrollBy({
+      left: direction * track.clientWidth,
       behavior: "smooth",
     });
   };
 
-  carouselPrevBtn.addEventListener("click", () => scrollByPage(-1));
-  carouselNextBtn.addEventListener("click", () => scrollByPage(1));
+  prevBtn.addEventListener("click", () => scrollByPage(-1));
+  nextBtn.addEventListener("click", () => scrollByPage(1));
 
-  articlesTrack.addEventListener("scroll", updateCarouselButtons, { passive: true });
+  track.addEventListener("scroll", updateCarouselButtons, { passive: true });
   window.addEventListener("resize", updateCarouselButtons);
 
   // Soporte de teclado cuando el track tiene foco
-  articlesTrack.addEventListener("keydown", (event) => {
+  track.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight") scrollByPage(1);
     if (event.key === "ArrowLeft") scrollByPage(-1);
   });
 
   updateCarouselButtons();
-}
+});
