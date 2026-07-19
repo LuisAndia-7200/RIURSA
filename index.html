@@ -339,75 +339,179 @@
 
       <!-- SECCION DE PUBLICACIONES -->
       
-      <section class="publications-page" id="publicaciones" aria-labelledby="pub-title">
-        <div class="section-heading section-heading--action reveal">
+      <section class="publications-page section" id="publicaciones" aria-labelledby="pub-title">
+        <div class="container">
+          <div class="section-heading section-heading--action reveal">
             <div>
               <p class="eyebrow"><span></span>Publicaciones</p>
-              <h2 id="activities-title">Recursos para fortalecer la gestión universitaria</h2>
-            </div>     
-        </div>
-       
-        <p class="pub-subtitle">
-              Nuestra labor se consolida en la gestión del conocimiento a través de la publicación de libros y artículos científicos, 
-              herramientas clave que generan conciencia e impulsan la virtud organizacional.
-        </p>  
-          
-        <div class="container pub-content">
-          <!-- Sección de Libros -->
+              <h2 id="pub-title">Conocimiento que se construye.<br />Gestión que trasciende.</h2>
+            </div>
+          </div>
+
+          <p class="pub-subtitle">
+                Nuestra labor se consolida en la gestión del conocimiento a través de la publicación de libros y artículos científicos, 
+                herramientas clave que generan conciencia e impulsan la virtud organizacional.
+          </p>  
+            
+          <div class="pub-content">
+          <!-- Sección de Libros con Carrusel (mismo patrón que Artículos) -->
           <section class="pub-section" aria-labelledby="books-title">
             <div class="resource-title-row">
               <h2 id="books-title" class="pub-section__title">Libros</h2>
+              <div class="carousel-controls">
+                <button class="carousel-btn carousel-btn--prev" aria-label="Libro anterior">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="carousel-btn carousel-btn--next" aria-label="Siguiente libro">
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
             </div>
-            
-            <div class="books-grid">
-              <article class="book-card">
-                <div class="book-cover book-cover--blue" aria-hidden="true">
-                  <span>RIURSA</span>
-                  <strong>Imagen</strong>
-                </div>
-                <div class="book-card__content">
-                  <p>Libro colectivo</p>
-                  <h4>Guía para la Institucionalización de la RSU</h4>
-                  <span class="file-meta">PDF · Documento digital</span>
-                  <a href="#contacto" class="download-link">
-                    Descargar PDF
-                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14" /></svg>
-                  </a>
-                </div>
-              </article>
 
-              <article class="book-card">
-                <div class="book-cover book-cover--green" aria-hidden="true">
-                  <span>GUÍA</span>
-                  <strong>Gestión<br />del impacto<br />social</strong>
-                  <small>Herramientas para universidades</small>
-                </div>
-                <div class="book-card__content">
-                  <p>Guía práctica</p>
-                  <h4>Herramientas para la gestión del impacto social universitario</h4>
-                  <span class="file-meta">PDF · Documento digital</span>
-                  <a href="#contacto" class="download-link">
-                    Descargar PDF
-                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14" /></svg>
-                  </a>
-                </div>
-              </article>
+            <div class="articles-carousel">
+              <div class="articles-carousel__track" id="booksTrack" role="region" aria-label="Carrusel de libros" tabindex="0">
+                <article class="article-card-carousel">
+                  <div class="article-card-carousel__image" style="background: linear-gradient(135deg, #0b3b5a 0%, #1a6089 100%);" aria-hidden="true">
+                    <span>Libro colectivo</span>
+                  </div>
+                  <div class="article-card-carousel__content">
+                    <p class="article-card-carousel__meta">
+                      <span class="article-category">Libro</span>
+                      <span class="article-date">PDF</span>
+                    </p>
+                    <h3>Guía para la Institucionalización de la RSU</h3>
+                    <p>
+                      Lineamientos y buenas prácticas para integrar la responsabilidad social
+                      como eje transversal en la gestión académica y administrativa.
+                    </p>
+                    <a href="#contacto" class="article-link">
+                      Descargar PDF
+                      <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M12 3v12m-5-5 5 5 5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
 
-              <article class="book-card">
-                <div class="book-cover book-cover--orange" aria-hidden="true">
-                  <span>RSU</span>
-                  <strong>Experiencias<br />de impacto<br />territorial</strong>
-                </div>
-                <div class="book-card__content">
-                  <p>Reporte institucional</p>
-                  <h4>Sistematización de buenas prácticas en responsabilidad social</h4>
-                  <span class="file-meta">PDF · Documento digital</span>
-                  <a href="#contacto" class="download-link">
-                    Descargar PDF
-                    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14" /></svg>
-                  </a>
-                </div>
-              </article>
+                <article class="article-card-carousel">
+                  <div class="article-card-carousel__image" style="background: linear-gradient(135deg, #467653 0%, #6c9b76 100%);" aria-hidden="true">
+                    <span>Guía práctica</span>
+                  </div>
+                  <div class="article-card-carousel__content">
+                    <p class="article-card-carousel__meta">
+                      <span class="article-category">Guía</span>
+                      <span class="article-date">PDF</span>
+                    </p>
+                    <h3>Herramientas para la gestión del impacto social universitario</h3>
+                    <p>
+                      Instrumentos prácticos para planificar, medir y comunicar el impacto
+                      social de los proyectos universitarios de responsabilidad social.
+                    </p>
+                    <a href="#contacto" class="article-link">
+                      Descargar PDF
+                      <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M12 3v12m-5-5 5 5 5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="article-card-carousel">
+                  <div class="article-card-carousel__image" style="background: linear-gradient(135deg, #d7a953 0%, #b8863a 100%);" aria-hidden="true">
+                    <span>Reporte institucional</span>
+                  </div>
+                  <div class="article-card-carousel__content">
+                    <p class="article-card-carousel__meta">
+                      <span class="article-category">Reporte</span>
+                      <span class="article-date">PDF</span>
+                    </p>
+                    <h3>Sistematización de buenas prácticas en responsabilidad social</h3>
+                    <p>
+                      Compilación de experiencias exitosas de universidades miembro de la
+                      red, documentadas como referencia para nuevas iniciativas de RSU.
+                    </p>
+                    <a href="#contacto" class="article-link">
+                      Descargar PDF
+                      <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M12 3v12m-5-5 5 5 5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="article-card-carousel">
+                  <div class="article-card-carousel__image" style="background: linear-gradient(135deg, #072c43 0%, #0b3b5a 100%);" aria-hidden="true">
+                    <span>Compilación</span>
+                  </div>
+                  <div class="article-card-carousel__content">
+                    <p class="article-card-carousel__meta">
+                      <span class="article-category">Compendio</span>
+                      <span class="article-date">PDF</span>
+                    </p>
+                    <h3>Compendio de experiencias RSU en universidades públicas</h3>
+                    <p>
+                      Casos representativos de gestión de la responsabilidad social en
+                      universidades públicas del Perú, con enfoque territorial.
+                    </p>
+                    <a href="#contacto" class="article-link">
+                      Descargar PDF
+                      <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M12 3v12m-5-5 5 5 5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="article-card-carousel">
+                  <div class="article-card-carousel__image" style="background: linear-gradient(135deg, #6c9b76 0%, #467653 100%);" aria-hidden="true">
+                    <span>Manual técnico</span>
+                  </div>
+                  <div class="article-card-carousel__content">
+                    <p class="article-card-carousel__meta">
+                      <span class="article-category">Manual</span>
+                      <span class="article-date">PDF</span>
+                    </p>
+                    <h3>Manual de indicadores ambientales para la gestión universitaria</h3>
+                    <p>
+                      Metodología para el seguimiento de indicadores ambientales aplicables
+                      a la gestión sostenible de los campus universitarios.
+                    </p>
+                    <a href="#contacto" class="article-link">
+                      Descargar PDF
+                      <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M12 3v12m-5-5 5 5 5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="article-card-carousel">
+                  <div class="article-card-carousel__image" style="background: linear-gradient(135deg, #1a6089 0%, #0b3b5a 100%);" aria-hidden="true">
+                    <span>Memoria institucional</span>
+                  </div>
+                  <div class="article-card-carousel__content">
+                    <p class="article-card-carousel__meta">
+                      <span class="article-category">Memoria</span>
+                      <span class="article-date">PDF</span>
+                    </p>
+                    <h3>Memoria institucional RIURSA 2020–2025</h3>
+                    <p>
+                      Balance de cinco años de trabajo conjunto entre las universidades
+                      adheridas a la red, sus principales logros y próximos retos.
+                    </p>
+                    <a href="#contacto" class="article-link">
+                      Descargar PDF
+                      <svg aria-hidden="true" viewBox="0 0 24 24">
+                        <path d="M12 3v12m-5-5 5 5 5-5M5 21h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
             </div>
           </section>
 
@@ -576,6 +680,7 @@
               </div>
             </div>
           </section>
+        </div>
         </div>
       </section>
 
