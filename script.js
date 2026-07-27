@@ -71,13 +71,13 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 900) closeNavigation();
 });
 
-/* ---------- Carruseles de Publicaciones (Libros y Artículos) ----------
-   Antes este script solo controlaba UN carrusel, buscando el primer botón
-   ".carousel-btn--prev/--next" de toda la página. Ahora hay dos carruseles
-   (Libros y Artículos), así que cada uno se conecta por separado buscando
-   sus propios botones DENTRO de su .pub-section (así el botón de "Libros"
-   nunca mueve el track de "Artículos" y viceversa). */
-const carouselSections = document.querySelectorAll(".pub-section");
+/* ---------- Carruseles horizontales (Libros, Artículos y Videos) ----------
+   Cada carrusel de la web vive dentro de un contenedor con la clase
+   ".pub-section" (Libros/Artículos, dentro de Publicaciones) o
+   ".carousel-block" (Videos, dentro de la página Nosotros ampliada).
+   El script busca esos contenedores y conecta cada track con SUS PROPIOS
+   botones (así el botón de un carrusel nunca mueve el de otro). */
+const carouselSections = document.querySelectorAll(".pub-section, .carousel-block");
 
 carouselSections.forEach((section) => {
   const track = section.querySelector(".articles-carousel__track");
