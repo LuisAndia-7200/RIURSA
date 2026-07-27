@@ -1455,7 +1455,8 @@ select {
 /* Exactamente 3 tarjetas visibles por vista: el ancho se calcula
    restando los 2 gaps entre las 3 tarjetas y dividiendo entre 3.
    Al hacer scroll por el ancho visible del track (ver script.js),
-   el desplazamiento siempre avanza un grupo completo de 3. */.article-card-carousel {
+   el desplazamiento siempre avanza un grupo completo de 3. */
+.article-card-carousel {
   flex: 0 0 calc((100% - 4rem) / 3);
   display: flex;
   flex-direction: column;
@@ -1466,11 +1467,6 @@ select {
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
   scroll-snap-align: start;
-}
-
-.article-card-carousel {
-  box-shadow: var(--shadow-lg);
-  border: 1px solid green;
 }
 
 .article-card-carousel:hover {
