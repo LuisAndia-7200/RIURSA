@@ -1468,10 +1468,15 @@ select {
   scroll-snap-align: start;
 }
 
+.article-card-carousel {
+  box-shadow: var(--shadow-lg);
+  border: 1px solid green;
+}
+
 .article-card-carousel:hover {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
-  border-color: var(--color-secondary-deep);
+  border: 1px solid black
+  /* border-color: var(--color-secondary-deep); */
 }
 
 .article-card-carousel__image {
