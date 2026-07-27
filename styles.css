@@ -1475,8 +1475,8 @@ select {
 
 .article-card-carousel:hover {
   box-shadow: var(--shadow-lg);
-  border: 1px solid black
-  /* border-color: var(--color-secondary-deep); */
+  transform: translateY(-4px);
+  border-color: var(--color-secondary-deep);
 }
 
 .article-card-carousel__image {
@@ -1500,7 +1500,7 @@ select {
 .article-card-carousel__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
