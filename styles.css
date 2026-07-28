@@ -1442,6 +1442,7 @@ select {
   scroll-snap-type: x mandatory;
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
+  margin-top: 0.5rem;
   scroll-padding: 0;
   /* El control es por botones; se oculta la barra nativa para un look más limpio */
   scrollbar-width: none;
