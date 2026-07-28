@@ -886,7 +886,7 @@ select {
   flex-direction: column;
   color: var(--color-ink);
   background: var(--color-surface);
-  border: 1px dotted var(--color-primary);
+  border: 2px dashed var(--color-primary);
   border-radius: var(--radius-md);
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
