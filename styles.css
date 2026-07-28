@@ -939,7 +939,7 @@ select {
 }
 
 .pillar-card h3 {
-  margin: 1 0 0.8rem;
+  margin: 1rem 0rem 0.8rem;
   color: inherit;
   font-family: var(--font-display);
   font-size: 1.4rem;
