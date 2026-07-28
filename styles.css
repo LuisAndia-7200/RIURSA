@@ -1449,6 +1449,7 @@ select {
 
 .articles-carousel__track::-webkit-scrollbar {
   display: none;
+  padding-top: 1rem;
 }
 
 /* Exactamente 3 tarjetas visibles por vista: el ancho se calcula
