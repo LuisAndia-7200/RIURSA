@@ -1066,13 +1066,15 @@ select {
 }
 
 .university-logo {
-  width: clamp(12rem, 18vw, 17rem);
-  height: 9rem;
-  padding-inline: 2rem;
+  width: clamp(10rem, 14vw, 13rem);
+  height: 10rem;
+  padding-inline: 1.5rem;
+  padding-block: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 0.65rem;
   filter: grayscale(1);
   opacity: 0.42;
   border-right: 1px solid rgba(255, 255, 255, 0.12);
@@ -1085,22 +1087,27 @@ select {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.university-logo span {
-  color: #bcd3c1;
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.7vw, 2.25rem);
-  font-weight: 800;
-  letter-spacing: -0.06em;
-  line-height: 1;
+/* Logo de la universidad (imagen/escudo). object-fit: contain evita que se
+   deforme sin importar la proporción original del archivo. El filtro de
+   color/gris ya lo aplica el contenedor .university-logo, así que la
+   imagen no necesita su propio filter. */
+.university-logo img {
+  max-width: 100%;
+  height: 5rem;
+  width: auto;
+  object-fit: contain;
 }
 
+/* Espacio prudente reservado para la sigla debajo del logo */
 .university-logo small {
-  margin-top: 0.55rem;
+  margin-top: 0.15rem;
   color: var(--color-white);
   font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
 }
 
 .network__footer {
