@@ -395,12 +395,6 @@ select {
    transparente con desenfoque, el logo (.brand), los enlaces del menú
    horizontal (.nav-link) y el botón de hamburguesa para móvil
    (.nav-toggle).
-
-   💡 EJEMPLO — cambiar el color de fondo del encabezado donde está
-      el menú horizontal: busca la clase .site-header y modifica la
-      propiedad 'background' (usa rgba para mantenerlo semi-transparente).
-   💡 EJEMPLO — cambiar el color de los enlaces del menú al pasar el
-      mouse: busca .nav-link:hover y cambia 'color'.
    ========================================================================== */
 
 .site-header {
@@ -2198,12 +2192,12 @@ select {
   inset: 0;
   display: grid;
   place-items: center;
-  background: rgba(7, 44, 67, 0.28);
+  background: rgba(7, 44, 67, 0.58);
   transition: background var(--transition);
 }
 
 .video-card:hover .video-card__play {
-  background: rgba(7, 44, 67, 0.42);
+  background: rgba(7, 44, 67, 0.22);
 }
 
 .video-card__play span {
