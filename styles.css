@@ -2347,7 +2347,7 @@ select {
 }
 
 
-   Se usa en: afecta varias secciones a la vez (menú, hero, tarjetas, footer...)
+ /*  Se usa en: afecta varias secciones a la vez (menú, hero, tarjetas, footer...)
    ----------------------------------------------------------------------
    Estos 3 bloques @media reacomodan VARIAS secciones al mismo tiempo
    cuando la pantalla se hace más chica, por eso están juntos aquí en
