@@ -2329,6 +2329,7 @@ select {
   padding: clamp(2rem, 4vw, 3rem);
   background: var(--color-surface);
   border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-secondary-deep);
 }
 
 .page-cta h3 {
