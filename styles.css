@@ -1460,18 +1460,17 @@ select {
   display: flex;
   flex-direction: column;
   background: var(--color-white);
-  border: 1px solid var(--color-line);
+  border: 1.5px solid var(--color-secondary-deep);
   border-radius: var(--radius-md);
-  overflow: visible;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition);
   scroll-snap-align: start;
 }
 
 .article-card-carousel:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-secondary-deep);
-  box-shadow: 0 12px 28px rgba(7, 44, 67, 0.14);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-7px);
 }
 
 .article-card-carousel__image {
