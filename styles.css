@@ -1382,13 +1382,11 @@ select {
    móvil — están junto a este bloque a propósito, porque solo afectan
    al carrusel.
 
-   💡 EJEMPLO — cambiar cuántas tarjetas se ven a la vez en escritorio:
-      busca '.article-card-carousel' (la regla con el comentario sobre
-      'Exactamente 3 tarjetas visibles') y cambia el '/ 3' por '/ 2' o
-      '/ 4' (ajusta también el script.js si cambias este número).
    ========================================================================== */
 
-/* ESTILOS DEL CARRUSEL DE ARTÍCULOS */.carousel-controls {
+/* ESTILOS DEL CARRUSEL DE ARTÍCULOS */
+
+.carousel-controls {
   display: flex;
   gap: 1rem;
 }
@@ -1463,16 +1461,16 @@ select {
   background: var(--color-white);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
-  overflow: hidden;
+  overflow: visible;
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
   scroll-snap-align: start;
 }
 
 .article-card-carousel:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: var(--color-secondary-deep);
+  box-shadow: 0 12px 28px rgba(7, 44, 67, 0.14);
 }
 
 .article-card-carousel__image {
@@ -1490,9 +1488,6 @@ select {
   overflow: hidden;
 }
 
-/* La imagen llena exactamente el mismo espacio (ancho/alto) que antes
-   ocupaba el bloque de color con el texto — object-fit: cover recorta
-   la imagen para que nunca se deforme, sin importar su proporción original. */
 .article-card-carousel__image img {
   width: 100%;
   height: 100%;
@@ -1577,7 +1572,8 @@ select {
 }
 
 /* Responsive para carrusel */
-/* Tablet: 2 tarjetas visibles por vista (1 gap entre ellas) */@media (max-width: 1024px) {
+/* Tablet: 2 tarjetas visibles por vista (1 gap entre ellas) */
+@media (max-width: 1024px) {
   .article-card-carousel {
     flex: 0 0 calc((100% - 2rem) / 2);
   }
