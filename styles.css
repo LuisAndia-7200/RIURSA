@@ -880,7 +880,7 @@ select {
 
 .pillar-card {
   position: relative;
-  min-height: 28rem;
+  min-height: 24rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -905,7 +905,7 @@ select {
 
 .pillar-card__number {
   position: absolute;
-  top: 1.8rem;
+  top: 1rem;
   right: 1.8rem;
   color: var(--color-muted);
   font-family: var(--font-display);
