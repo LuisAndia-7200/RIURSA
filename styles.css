@@ -1491,7 +1491,7 @@ select {
 
 .article-card-carousel__content {
   flex: 1;
-  padding: 1.75rem 1.5rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -1501,7 +1501,7 @@ select {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   flex-wrap: wrap;
 }
 
