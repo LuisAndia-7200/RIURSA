@@ -1156,7 +1156,7 @@ select {
 .activity-card {
   overflow: hidden;
   background: var(--color-white);
-  border: 1px solid rgba(11, 59, 90, 0.08);
+  border: 1.5px solid var(--color-secondary-deep);
   border-radius: var(--radius-md);
   transition: transform var(--transition), box-shadow var(--transition);
 }
