@@ -2245,15 +2245,6 @@ select {
 }
 
 /* --- Cuadrícula del equipo directivo --- */
-#equipo{
- display: flex; 
- flex-direction: row; 
- gap: 20px; 
- justify-content: center; 
- align-items: center; 
- padding: 15px; 
-}
-
 .team-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2337,6 +2328,71 @@ select {
   color: var(--color-secondary-deep);
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+/* --- Cuadrícula de comités (2x2 + 1 bloque ancho debajo) --- */
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.committee-card {
+  padding: 2.25rem;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.committee-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.committee-card--wide {
+  grid-column: 1 / -1;
+}
+
+.committee-card h3 {
+  margin: 0 0 1.25rem;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.committee-card__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.committee-card--wide .committee-card__list {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  column-gap: 2.5rem;
+}
+
+.committee-card__list li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: var(--color-text);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.committee-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-secondary-deep);
 }
 
 /* --- Franja de cierre con enlace a la otra página interna --- */
@@ -2563,6 +2619,10 @@ select {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .committee-card {
+    padding: 1.75rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2693,6 +2753,14 @@ select {
 
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .committee-card--wide .committee-card__list {
+    grid-template-columns: 1fr;
   }
 
   .page-hero {
