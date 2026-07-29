@@ -143,31 +143,36 @@
       <!-- ===== CUADRÍCULA DEL EQUIPO ===== -->
       <section class="section" id="equipo" aria-labelledby="equipo-title">
         <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow"><span></span>Alta gerencia de RIURSA</p>
-            <h2 id="equipo-title">Liderazgo comprometido con la gestión responsable.</h2>
-          </div>
+          <!-- equipo-layout: título a la izquierda, fotos a la derecha,
+               ambos ocupando el 50% del ancho y centrados verticalmente
+               entre sí (mismo patrón que .content-block de Misión/Visión) -->
+          <div class="equipo-layout">
+            <div class="section-heading reveal">
+              <p class="eyebrow"><span></span>Alta gerencia de RIURSA</p>
+              <h2 id="equipo-title">Liderazgo comprometido con la gestión responsable.</h2>
+            </div>
 
-          <div class="team-grid">
-            <article class="team-card reveal">
-              <div class="team-card__photo">
-                <img src="" alt="Foto Walter Andia — Presidente" loading="lazy" />
-              </div>
-              <div class="team-card__body">
-                <h3>Walter Andía</h3>
-                <p>Presidente</p>
-              </div>
-            </article>
+            <div class="team-grid equipo-layout__photos">
+              <article class="team-card reveal">
+                <div class="team-card__photo">
+                  <img src="" alt="Foto Walter Andia — Presidente" loading="lazy" />
+                </div>
+                <div class="team-card__body">
+                  <h3>Walter Andía</h3>
+                  <p>Presidente</p>
+                </div>
+              </article>
 
-            <article class="team-card reveal reveal--delay">
-              <div class="team-card__photo">
-                <img src="assets/images/equipo/directivo-02.jpg" alt="Fotografía de [Nombre y apellido] — Vicepresidencia" loading="lazy" />
-              </div>
-              <div class="team-card__body">
-                <h3>Sonia Antezan Alzamora</h3>
-                <p>Vicepresidenta</p>
-              </div>
-            </article>
+              <article class="team-card reveal reveal--delay">
+                <div class="team-card__photo">
+                  <img src="assets/images/equipo/directivo-02.jpg" alt="Fotografía de [Nombre y apellido] — Vicepresidencia" loading="lazy" />
+                </div>
+                <div class="team-card__body">
+                  <h3>Sonia Antezan Alzamora</h3>
+                  <p>Vicepresidenta</p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
