@@ -2267,6 +2267,26 @@ select {
   letter-spacing: 0.03em;
 }
 
+/* --- Título + fotos del equipo directivo, lado a lado (50% / 50%) --- */
+.equipo-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+/* Dentro de este layout el título ya no necesita el margen inferior que usa
+   cuando va apilado sobre el resto de la sección */
+.equipo-layout .section-heading {
+  margin-bottom: 0;
+}
+
+/* Las fotos se centran dentro de su mitad de la sección */
+.equipo-layout__photos {
+  justify-content: center;
+  justify-items: center;
+}
+
 /* --- Cuadrícula del equipo directivo --- */
 .team-grid {
   display: grid;
@@ -2628,6 +2648,15 @@ select {
 
   .content-block {
     grid-template-columns: 1fr;
+  }
+
+  .equipo-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .equipo-layout .section-heading {
+    margin-bottom: 0;
   }
 
   .content-block--reverse .content-block__visual {
