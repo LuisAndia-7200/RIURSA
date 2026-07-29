@@ -2190,9 +2190,10 @@ select {
 .video-card {
   cursor: pointer;
 }
-
+/* Prueba */
 .video-card__image {
   position: relative;
+  padding: 0.5rem;
 }
 
 .video-card__play {
