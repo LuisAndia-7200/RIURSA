@@ -2244,6 +2244,15 @@ select {
 }
 
 /* --- Cuadrícula del equipo directivo --- */
+#equipo{
+ display: flex; 
+ flex-direction: row; 
+ gap: 20px; 
+ justify-content: center; 
+ align-items: center; 
+ padding: 15px; 
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
