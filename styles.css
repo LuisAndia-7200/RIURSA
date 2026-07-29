@@ -2231,6 +2231,29 @@ select {
   fill: currentColor;
 }
 
+/* Contenedor del video embebido (iframe de YouTube) dentro de la tarjeta
+   del carrusel. Antes el iframe tenía width/height fijos (420x200) que casi
+   nunca coincidían con el ancho real de la tarjeta, así que el video se
+   recortaba por los bordes. Con aspect-ratio + iframe en position:absolute
+   el video siempre llena el contenedor completo, de forma responsiva y sin
+   recortes, sea cual sea el ancho de la card. */
+.video-card__image.article-card-carousel__image {
+  height: auto;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  background: #0b1f2e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.video-card__image.article-card-carousel__image iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 .video-card__duration {
   position: absolute;
   right: 0.75rem;
