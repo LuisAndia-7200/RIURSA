@@ -2299,12 +2299,11 @@ select {
   flex-direction: column;
 }
 
-/* modificacion */
 .team-card__photo {
   position: relative;
   aspect-ratio: 3 / 4;
   overflow: hidden;
-  background: var(--color-surface);
+  background: var(--color-surface-warm);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition), transform var(--transition);
