@@ -2381,7 +2381,8 @@ select {
 
 .committee-card {
   padding: 2.25rem;
-  background: var(--color-white);
+  margin: 0.5rem;
+  background: rgba(120, 200, 234, 1);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition), transform var(--transition);
