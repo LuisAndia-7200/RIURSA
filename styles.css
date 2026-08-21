@@ -7,32 +7,9 @@
    arriba hacia abajo, y al final el footer y los ajustes para pantallas
    pequeñas (responsive).
 
-   ¿CÓMO ENCONTRAR LO QUE NECESITAS?
-   Busca (Ctrl/Cmd + F) el número de sección o el nombre de la clase que
-   viste en el HTML. Cada bloque grande empieza con un comentario-banner
-   como el de esta misma introducción, con un número y un título en
-   mayúsculas (por ejemplo: "3. ENCABEZADO Y MENÚ DE NAVEGACIÓN").
-   ¿CÓMO CAMBIAR UN COLOR?
-   Casi todos los colores del sitio están definidos UNA sola vez al inicio,
-   en la sección "1. VARIABLES DE DISEÑO" (dentro de :root). Cambia el color
-   ahí y se actualiza en TODO el sitio automáticamente. Evita escribir
-   colores nuevos "sueltos" más abajo en el archivo.
-   ============================================================================ */
-
-
-/* ==========================================================================
+  ==========================================================================
    1. VARIABLES DE DISEÑO (colores, fuentes, tamaños)
    Se usa en: todo el documento
-   ----------------------------------------------------------------------
-   Aquí se define, una sola vez, cada color, fuente y medida que se
-   reutiliza en el resto del archivo (por eso se ven cosas como
-   var(--color-primary) más abajo: significa 'usa el color definido acá').
-
-   💡 EJEMPLO — cambiar el color institucional (azul) de toda la web:
-      modifica el valor de --color-primary. Todo lo que usa ese azul
-      (botones, enlaces activos, fondo del héroe, etc.) cambiará junto.
-   💡 --color-secondary es el verde 'ecológico' usado en acentos.
-   💡 --font-display es la fuente de los títulos; --font-body la del texto.
    ========================================================================== */
 
 :root {
@@ -65,12 +42,6 @@
 /* ==========================================================================
    2. BASE / RESET DEL NAVEGADOR
    Se usa en: toda la página (etiquetas html, body, a, img, botones...)
-   ----------------------------------------------------------------------
-   Reglas generales que igualan cómo los navegadores muestran las
-   etiquetas HTML básicas (quitan márgenes por defecto, definen el
-   tipo de letra base, el color de fondo general, etc.).
-   Normalmente NO necesitas tocar nada aquí salvo que quieras cambiar
-   el color de fondo o de texto por defecto de TODA la página.
    ========================================================================== */
 
 *,
@@ -132,19 +103,7 @@ select {
 /* ==========================================================================
    3. UTILIDADES GENERALES (se repiten en varias secciones)
    Se usa en: clases reutilizables: .container, .section, .button, .eyebrow, etc.
-   ----------------------------------------------------------------------
-   Clases 'de ayuda' que se usan en MUCHAS secciones distintas del
-   sitio, no solo en una. Por ejemplo, .button define el estilo base
-   de todos los botones, y luego cada variante (--primary, --ghost,
-   --outline, --light) cambia solo el color según dónde se use.
-   .section-heading y .eyebrow son el 'título pequeño + título grande'
-   que se repite arriba de casi cada sección (Nosotros, Actividades...).
-   .reveal controla la animación de aparición suave al hacer scroll.
-
-   💡 EJEMPLO — cambiar el color de TODOS los botones verdes
-      (los principales, tipo 'Únete a la Red'): busca .button--primary
-      y cambia su 'background'.
-   ========================================================================== */
+    ========================================================================== */
 
 .skip-link {
   position: fixed;
@@ -390,11 +349,6 @@ select {
 /* ==========================================================================
    4. ENCABEZADO Y MENÚ DE NAVEGACIÓN
    Se usa en: <header class="site-header"> ... <nav class="main-nav">
-   ----------------------------------------------------------------------
-   Todo lo relacionado a la barra superior fija: el fondo semi-
-   transparente con desenfoque, el logo (.brand), los enlaces del menú
-   horizontal (.nav-link) y el botón de hamburguesa para móvil
-   (.nav-toggle).
    ========================================================================== */
 
 .site-header {
@@ -508,16 +462,6 @@ select {
 /* ==========================================================================
    5. SECCIÓN HERO (bienvenida / portada)
    Se usa en: <section class="hero" id="inicio">
-   ----------------------------------------------------------------------
-   El primer bloque grande que se ve al entrar al sitio: título
-   principal (h1), texto de bienvenida, botones de acción y la tarjeta
-   visual decorativa de la derecha (.impact-card, con el mapa de
-   puntos y el sello circular 'R').
-
-   💡 EJEMPLO — cambiar el degradado de fondo del hero: busca .hero y
-      modifica la propiedad 'background' (el primer 'linear-gradient').
-   💡 EJEMPLO — cambiar el texto destacado en verde dentro del título
-      (la palabra dentro de <em>): busca '.hero h1 em' y cambia 'color'.
    ========================================================================== */
 
 .hero {
@@ -863,13 +807,6 @@ select {
 /* ==========================================================================
    6. SECCIÓN NOSOTROS (tarjetas de misión / pilares)
    Se usa en: <section class="about" id="nosotros"> — .pillars-grid, .pillar-card
-   ----------------------------------------------------------------------
-   Las 3 tarjetas que resumen los pilares de RIURSA (Diálogo
-   académico, Cooperación mutua, Desarrollo social). La primera
-   tarjeta usa .pillar-card--featured y se ve resaltada en azul.
-
-   💡 EJEMPLO — cambiar el color de fondo de la tarjeta destacada:
-      busca .pillar-card--featured y cambia 'background'.
    ========================================================================== */
 
 .pillars-grid {
@@ -976,15 +913,6 @@ select {
 /* ==========================================================================
    7. SECCIÓN UNIVERSIDADES ADHERIDAS (red de alianzas)
    Se usa en: <section class="network" id="universidades"> — .logo-ticker
-   ----------------------------------------------------------------------
-   Fondo azul oscuro con el listado de universidades que se desplaza
-   solo (.logo-track, animado con @keyframes ticker). Cada logo es
-   un .university-logo, que aparece en gris y se colorea al pasar
-   el mouse.
-
-   💡 EJEMPLO — cambiar la velocidad del desplazamiento automático:
-      busca '.logo-track' y cambia el número de segundos en
-      'animation: ticker 32s linear infinite;' (más alto = más lento).
    ========================================================================== */
 
 .network {
@@ -1087,10 +1015,6 @@ select {
   background: rgba(255, 255, 255, 0.04);
 }
 
-/* Logo de la universidad (imagen/escudo). object-fit: contain evita que se
-   deforme sin importar la proporción original del archivo. El filtro de
-   color/gris ya lo aplica el contenedor .university-logo, así que la
-   imagen no necesita su propio filter. */
 .university-logo img {
   max-width: 100%;
   height: 5rem;
@@ -1098,7 +1022,6 @@ select {
   object-fit: contain;
 }
 
-/* Espacio prudente reservado para la sigla debajo del logo */
 .university-logo small {
   margin-top: 0.15rem;
   color: var(--color-white);
@@ -1132,15 +1055,6 @@ select {
 /* ==========================================================================
    8. SECCIÓN ACTIVIDADES RECIENTES
    Se usa en: <section class="activities" id="actividades"> — .activities-grid, .activity-card
-   ----------------------------------------------------------------------
-   Cuadrícula de tarjetas de eventos. La primera tarjeta (.activity-
-   card--featured) ocupa más espacio que las demás. .cover-graphic y
-   .meeting-dot/.meeting-line son los dibujos decorativos de fondo
-   que se usan cuando una actividad no tiene foto real todavía.
-
-   💡 EJEMPLO — cambiar el color de la etiqueta (ej. 'Capacitación')
-      sobre la imagen: busca .activity-card__tag y cambia 'background'
-      y 'color'.
    ========================================================================== */
 
 .activities {
@@ -1373,20 +1287,7 @@ select {
 /* ==========================================================================
    9. PUBLICACIONES — CARRUSEL DE ARTÍCULOS
    Se usa en: <section aria-labelledby="articles-title"> dentro de #publicaciones
-   ----------------------------------------------------------------------
-   El carrusel horizontal con flechas (izquierda/derecha) que muestra
-   3 artículos a la vez. .articles-carousel__track es la franja que
-   se desplaza; cada .rousel es una tarjeta individual
-   (imagen arriba, categoría + fecha, título y descripción).
-   Los @media que aparecen al final de este bloque ajustan cuántas
-   tarjetas se ven por pantalla: 3 en escritorio, 2 en tablet, 1 en
-   móvil — están junto a este bloque a propósito, porque solo afectan
-   al carrusel.
-
    ========================================================================== */
-
-/* ESTILOS DEL CARRUSEL DE ARTÍCULOS */
-
 .carousel-controls {
   display: flex;
   gap: 1rem;
@@ -1444,7 +1345,6 @@ select {
   padding-bottom: 0.25rem;
   margin-top: 0.5rem;
   scroll-padding: 0;
-  /* El control es por botones; se oculta la barra nativa para un look más limpio */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -1453,10 +1353,6 @@ select {
   display: none;
 }
 
-/* Exactamente 3 tarjetas visibles por vista: el ancho se calcula
-   restando los 2 gaps entre las 3 tarjetas y dividiendo entre 3.
-   Al hacer scroll por el ancho visible del track (ver script.js),
-   el desplazamiento siempre avanza un grupo completo de 3. */
 .article-card-carousel {
   flex: 0 0 calc((100% - 4rem) / 3);
   display: flex;
@@ -1574,7 +1470,6 @@ select {
 }
 
 /* Responsive para carrusel */
-/* Tablet: 2 tarjetas visibles por vista (1 gap entre ellas) */
 @media (max-width: 1024px) {
   .article-card-carousel {
     flex: 0 0 calc((100% - 2rem) / 2);
@@ -1633,18 +1528,6 @@ select {
 /* ==========================================================================
    10. PUBLICACIONES — ENCABEZADO GENERAL Y SUB-SECCIONES (Libros / Artículos)
    Se usa en: <section class="publications-page" id="publicaciones">
-   ----------------------------------------------------------------------
-   .publications-page es la sección completa de "Publicaciones". Dentro
-   contiene dos bloques con la MISMA estructura de carrusel (uno para
-   "Libros" y otro para "Artículos", ver sección 9): cada uno es un
-   .pub-section con su fila de título (.resource-title-row) y su propio
-   carrusel horizontal.
-   .pub-content solo se encarga de separar verticalmente esos dos bloques.
-
-   💡 EJEMPLO — cambiar el espacio entre el bloque de Libros y el de
-      Artículos: busca .pub-content y ajusta 'gap'.
-   💡 EJEMPLO — cambiar el color del título "Libros" / "Artículos":
-      busca .pub-section__title y cambia 'color'.
    ========================================================================== */
 
 .pub-subtitle {
@@ -1682,10 +1565,6 @@ select {
 /* ==========================================================================
    11. PUBLICACIONES — MARCO NORMATIVO (normas legales)
    Se usa en: <section id="normas"> — .legal-panel, .legal-list
-   ----------------------------------------------------------------------
-   El panel azul con la lista de enlaces a normas legales (Ley
-   Universitaria, SUNEDU, MINAM, etc.), ubicado junto a la sección de
-   publicaciones.
    ========================================================================== */
 
 .legal-panel {
@@ -1798,12 +1677,6 @@ select {
 /* ==========================================================================
    12. SECCIÓN 'ÚNETE A LA RED' (llamado a la acción)
    Se usa en: <section class="join" id="unete">
-   ----------------------------------------------------------------------
-   Banda verde con el mensaje final invitando a las universidades a
-   sumarse, antes del footer.
-
-   💡 EJEMPLO — cambiar el color de fondo de esta franja: busca
-      .join y modifica 'background'.
    ========================================================================== */
 
 .join {
@@ -1861,13 +1734,6 @@ select {
 /* ==========================================================================
    13. PIE DE PÁGINA (FOOTER)
    Se usa en: <footer class="site-footer" id="contacto">
-   ----------------------------------------------------------------------
-   Franja oscura final con el logo, columnas de enlaces, datos de
-   contacto, íconos de redes sociales (.social-links) y la línea de
-   derechos reservados (.footer-bottom).
-
-   💡 EJEMPLO — cambiar el color de fondo del footer: busca
-      .site-footer y modifica 'background'.
    ========================================================================== */
 
 .site-footer {
@@ -1998,22 +1864,7 @@ select {
 /* ==========================================================================
    13b. PÁGINAS INTERNAS — "Nosotros" ampliado y "Equipo directivo"
    Se usa en: nosotros.html y equipo.html (páginas nuevas, fuera de index.html)
-   ----------------------------------------------------------------------
-   Estos componentes NO aparecen en la página de inicio; son para las dos
-   páginas adicionales que amplían la sección "Nosotros": una con Misión,
-   Visión y un carrusel de videos (nosotros.html), y otra con las tarjetas
-   del equipo directivo (equipo.html). Reutilizan los mismos colores,
-   tipografías y espaciados que el resto del sitio para que se vean como
-   parte de la misma web, no como páginas aparte.
-
-   💡 EJEMPLO — cambiar el color del banner superior de estas páginas
-      (donde dice "Nosotros" o "Equipo directivo" en grande): busca
-      .page-hero y modifica 'background'.
-   💡 EJEMPLO — cambiar cuántas personas se ven por fila en el equipo
-      directivo: busca .team-grid y cambia el número en 'repeat(...)'.
    ========================================================================== */
-
-/* --- Banner superior de página interna (reemplaza al hero completo) --- */
 .page-hero {
   position: relative;
   overflow: hidden;
@@ -2391,6 +2242,27 @@ select {
 .committee-card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
+}
+
+/* --- Colores diferenciados por comité --- */
+#comite-ambiental {
+  background: rgba(168, 224, 178, 0.55); /* verde suave */
+}
+
+#comite-saludable {
+  background: rgba(245, 224, 145, 0.55); /* amarillo suave */
+}
+
+#comite-social {
+  background: rgba(120, 200, 234, 1); /* celeste (original) */
+}
+
+#comite-voluntariado {
+  background: rgba(248, 195, 150, 0.55); /* naranja suave */
+}
+
+#comite-gobernanza {
+  background: rgba(240, 165, 165, 0.55); /* rojo suave */
 }
 
 .committee-card--wide {
