@@ -1934,7 +1934,6 @@ select {
   line-height: 1.7;
 }
 
-/* --- Bloques Misión / Visión (texto + panel visual, alternado) --- */
 .content-block {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.85fr);
@@ -2037,11 +2036,10 @@ select {
   background: linear-gradient(180deg, transparent 55%, rgba(7, 44, 67, 0.55));
 }
 
-/* --- Carrusel de videos (mismo patrón que Libros / Artículos) --- */
 .video-card {
   cursor: pointer;
 }
-/* Prueba */
+
 .video-card__image {
   position: relative;
   padding: 0.5rem;
@@ -2081,13 +2079,6 @@ select {
   margin-left: 0.15rem;
   fill: currentColor;
 }
-
-/* Contenedor del video embebido (iframe de YouTube) dentro de la tarjeta
-   del carrusel. Antes el iframe tenía width/height fijos (420x200) que casi
-   nunca coincidían con el ancho real de la tarjeta, así que el video se
-   recortaba por los bordes. Con aspect-ratio + iframe en position:absolute
-   el video siempre llena el contenedor completo, de forma responsiva y sin
-   recortes, sea cual sea el ancho de la card. */
 .video-card__image.article-card-carousel__image {
   height: auto;
   aspect-ratio: 16 / 9;
@@ -2118,7 +2109,6 @@ select {
   letter-spacing: 0.03em;
 }
 
-/* --- Título + fotos del equipo directivo, lado a lado (50% / 50%) --- */
 .equipo-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2126,13 +2116,10 @@ select {
   gap: clamp(2.5rem, 6vw, 5rem);
 }
 
-/* Dentro de este layout el título ya no necesita el margen inferior que usa
-   cuando va apilado sobre el resto de la sección */
 .equipo-layout .section-heading {
   margin-bottom: 0;
 }
 
-/* Las fotos se centran dentro de su mitad de la sección */
 .equipo-layout__photos {
   justify-content: center;
   justify-items: center;
@@ -2223,7 +2210,7 @@ select {
   font-weight: 600;
 }
 
-/* --- Cuadrícula de comités (2x2 + 1 bloque ancho debajo) --- */
+/* --- Cuadrícula de comités --- */
 .committee-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2246,23 +2233,23 @@ select {
 
 /* --- Colores diferenciados por comité --- */
 #comite-ambiental {
-  background: rgba(168, 224, 178, 0.55); /* verde suave */
+  background: rgba(168, 224, 178, 0.55); 
 }
 
 #comite-saludable {
-  background: rgba(245, 224, 145, 0.55); /* amarillo suave */
+  background: rgba(245, 224, 145, 0.55); 
 }
 
 #comite-social {
-  background: rgba(120, 200, 234, 1); /* celeste (original) */
+  background: rgba(120, 200, 234, 1); 
 }
 
 #comite-voluntariado {
-  background: rgba(248, 195, 150, 0.55); /* naranja suave */
+  background: rgba(248, 195, 150, 0.55);
 }
 
 #comite-gobernanza {
-  background: rgba(240, 165, 165, 0.55); /* rojo suave */
+  background: rgba(240, 165, 165, 0.55);
 }
 
 .committee-card--wide {
@@ -2310,7 +2297,6 @@ select {
   background: var(--color-secondary-deep);
 }
 
-/* --- Franja de cierre con enlace a la otra página interna --- */
 .page-cta {
   display: flex;
   align-items: center;
@@ -2337,28 +2323,6 @@ select {
   color: var(--color-text);
   font-size: 0.95rem;
 }
-
-
- /*  Se usa en: afecta varias secciones a la vez (menú, hero, tarjetas, footer...)
-   ----------------------------------------------------------------------
-   Estos 3 bloques @media reacomodan VARIAS secciones al mismo tiempo
-   cuando la pantalla se hace más chica, por eso están juntos aquí en
-   vez de repartidos. Cada uno se activa a partir de cierto ancho:
-   
-     • @media (max-width: 1120px) → pantallas medianas/laptops chicas:
-       oculta el botón 'Únete a la Red' del menú, reduce el menú y
-       reacomoda la cuadrícula de actividades a 2 columnas.
-     • @media (max-width: 900px)  → tablets: aparece el botón de
-       menú hamburguesa (.nav-toggle), el menú pasa a desplegable,
-       el hero se apila en una sola columna.
-     • @media (max-width: 640px)  → celulares: los botones ocupan
-       todo el ancho, los títulos se achican, las tarjetas pasan a
-       una sola columna.
-
-   💡 Si algo se ve mal en el celular, primero revisa el bloque
-      @media (max-width: 640px); si se ve mal en tablet, revisa el
-      de 900px.
-   ========================================================================== */
 
 @media (max-width: 1120px) {
   .main-nav {
@@ -2704,10 +2668,6 @@ select {
 /* ==========================================================================
    15. ACCESIBILIDAD — RESPETAR 'REDUCIR MOVIMIENTO'
    Se usa en: todo el sitio
-   ----------------------------------------------------------------------
-   Si la persona activó la opción del sistema operativo 'reducir el
-   movimiento', esta regla apaga las animaciones y transiciones para
-   evitar mareos o molestias. No necesitas tocar esto normalmente.
    ========================================================================== */
 
 @media (prefers-reduced-motion: reduce) {
