@@ -1,6 +1,6 @@
 # RIURSA — Sitio institucional
 
-Rediseño de la página principal de la Red Internacional Universitaria de Responsabilidad Social y Ambiental (RIURSA) en Perú. El sitio presenta la misión de la organización, universidades adheridas, actividades, publicaciones, marco normativo y vías de contacto en una experiencia moderna y accesible.
+Rediseño de la página principal de la Red Internacional Universitaria de Responsabilidad Social y Ambiental (RIURSA)
 
 ## Tecnologías
 
